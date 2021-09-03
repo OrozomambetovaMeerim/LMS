@@ -15,5 +15,5 @@ def my_login(request):
             return HttpResponse("Ошибка")
 
 
-def homepage(request):
-    return render(request, "home.html")
+# def homepage(request):
+    # return render(request, "home.html")

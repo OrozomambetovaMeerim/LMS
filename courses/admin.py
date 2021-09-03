@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Subject, Course, Module
+from .models import Student, Teacher
 
 
 @admin.register(Subject)
@@ -17,3 +18,6 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ['title', 'overview']
     # prepopulated_fields = {('slug'): 'title'}
     inlines = [ModuleInLine]
+
+admin.site.register(Student)
+admin.site.register(Teacher)
