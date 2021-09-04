@@ -131,3 +131,28 @@ class Teacher(models.Model):
     def __str__(self):
         return str(self.fname) + ' ' + str(self.lname)
 
+
+class Homework(models.Model):
+    name = models.CharField(max_length=250, null=True, default=' ')
+    start_date = models.DateTimeField(null=True)
+    end_date = models.DateTimeField(null=True)
+    relate_class = models.ForeignKey(Course, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class Exam(models.Model):
+    name = models.CharField(max_length=250, null=True, default=' ')
+    date = models.DateTimeField(null=True)
+    relate_class = models.ForeignKey(Course, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class HomeworkAnswer(models.Model):
+    description = models.CharField(max_length=1000, null=True, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    file = models.FileField()
+    student = models.ForeignKey(Student, null=True, on_delete=models.CASCADE)
