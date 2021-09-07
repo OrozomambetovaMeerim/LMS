@@ -1,0 +1,62 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image:  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLfg6aAUbBARzPjPSdiBuERQYRJuHIVPMl8A&usqp=CAU);
+}
+
+h1{
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 3px solid black;
+}
+
+form{
+    margin: 20px;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBMnMBovlFCci_6nrIPdxqCh9nw7AvZbRDAw&usqp=CAU);
+    width: 450px;
+    height: 700px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+}
+
+.group{
+    margin: 2px;
+    padding: 5px;
+}
+
+.group1{
+    margin: 2px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+label{
+    padding-left: 10px;
+    text-transform: uppercase;
+    
+}
+
+input{
+    margin-top: 3px;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px/20px;
+    border: none;
+    padding-left: 15px;
+    font-size: 18px;
+    box-shadow:  2px 2px 5px rgba(0,0,0,0.82);
+}
+button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    height: 30px;
+    color:black;
+    background: blueviolet;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow:  2px 2px 5px rgba(0,0,0,0.82);
+}

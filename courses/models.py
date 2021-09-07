@@ -105,6 +105,14 @@ class Student(models.Model):
     Course = models.ForeignKey(Course, null=True, on_delete=models.SET_NULL)
     Subject = models.ManyToManyField(Subject)
 
+
+    # def Student(request):
+    #     student_list = Student.objects.all()
+    #     return (request, "student.html")
+
+    # def	__str__(self):
+    #     return  self.name
+
     def get_courses(self):
         course_list = self.courses.all()
         return course_list

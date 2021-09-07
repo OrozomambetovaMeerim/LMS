@@ -1,0 +1,49 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Авторизация студента</title>
+     
+        <link rel="stylesheet" href="../static/student.css" /> 
+    </head>
+<body>
+    <form action="{% url 'student-add' %}" method="POST">
+        <!-- {% csrf_token %} -->
+        <h1>Авторизация</h1>
+        <div class="group">
+            <label for="">Ваше имя:</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">Ваше фамилия:</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">Имя пользователя:</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">email:</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">Выберите курс:</label>
+            <input type="text">
+        </div>
+
+        <div class="group">
+            <label for="">Пароль:</label>
+            <input type="text">
+        </div>
+        <div class="group">
+            <label for="">Подтвердите пароль:</label>
+            <input type="text">
+        </div>
+        <div class="group1">
+                <button>Регистрация</button>
+        </div>
+</body>
+</html>
+

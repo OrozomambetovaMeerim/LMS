@@ -1,3 +1,4 @@
+# from educa.courses.models import Student
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login
 
@@ -17,3 +18,7 @@ def my_login(request):
 
 # def homepage(request):
     # return render(request, "home.html")
+
+# def Student(request):
+#     student_list = Student.objects.all()
+#     return render(request, "student.html")
