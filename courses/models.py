@@ -110,8 +110,8 @@ class Student(models.Model):
     #     student_list = Student.objects.all()
     #     return (request, "student.html")
 
-    # def	__str__(self):
-    #     return  self.name
+    def	__str__(self):
+        return  self.name
 
     def get_courses(self):
         course_list = self.courses.all()
@@ -164,3 +164,9 @@ class HomeworkAnswer(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     file = models.FileField()
     student = models.ForeignKey(Student, null=True, on_delete=models.CASCADE)
+
+class Student_answer(models.Model):
+    name = models.CharField(max_length=130)
+    email = models.EmailField(blank=True)
+    subject_title = models.CharField(max_length=30, blank=True)
+    answer = models.TextField(blank=True)

@@ -1,6 +1,10 @@
-# from educa.courses.models import Student
+from .models import Student
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login
+from django.views.generic import CreateView
+from .models import Student_answer
+
+
 
 def my_login(request):
     if request.method == 'GET':
@@ -19,6 +23,9 @@ def my_login(request):
 # def homepage(request):
     # return render(request, "home.html")
 
-# def Student(request):
-#     student_list = Student.objects.all()
-#     return render(request, "student.html")
+def Student(request):
+    return render(request, "student.html")
+
+class Student_answerCreateView(CreateView):
+    model = Student_answer
+    fields = ('name', 'email', 'subject_title', 'answer')
